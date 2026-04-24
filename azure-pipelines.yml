@@ -26,6 +26,14 @@ steps:
 - script: npm test
   displayName: 'Executar testes'
 
+- script: npx eslint .
+  displayName: 'Lint'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '.'
+    ArtifactName: 'build'
+
 # Verificar estrutura (debug útil)
 - script: ls -la
   displayName: 'Listar arquivos'
