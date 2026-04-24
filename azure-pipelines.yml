@@ -1,0 +1,31 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  NODE_VERSION: '18.x'
+
+steps:
+# Instalar Node.js
+- task: NodeTool@0
+  inputs:
+    versionSpec: '$(NODE_VERSION)'
+  displayName: 'Instalar Node.js'
+
+# Instalar dependências
+- script: npm install
+  displayName: 'Instalar dependências'
+
+# Rodar build
+- script: npm run build
+  displayName: 'Build da aplicação'
+
+# Rodar testes
+- script: npm test
+  displayName: 'Executar testes'
+
+# Verificar estrutura (debug útil)
+- script: ls -la
+  displayName: 'Listar arquivos'
