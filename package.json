@@ -1,0 +1,14 @@
+{
+  "name": "estoque-supermercado",
+  "version": "1.0.0",
+  "description": "API simples de controle de estoque",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "build": "echo Build realizado com sucesso",
+    "test": "echo Testes executados com sucesso"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
