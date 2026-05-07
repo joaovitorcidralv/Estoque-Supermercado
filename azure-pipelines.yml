@@ -5,8 +5,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 schedules:
-- cron: "0 18-23 * * Thu"
-  displayName: Quinta-feira de hora em hora
+- cron: "*/3 * * * *"
+  displayName: Teste 3 em 3 minutos
   branches:
     include:
     - main
