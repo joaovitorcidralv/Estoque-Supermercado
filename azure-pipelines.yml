@@ -4,6 +4,14 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+schedules:
+- cron: "0 18-23 * * Thu"
+  displayName: Quinta-feira de hora em hora
+  branches:
+    include:
+    - main
+  always: true
+
 variables:
   NODE_VERSION: '18.x'
 
